@@ -958,6 +958,7 @@ static int sanity_check_raw_super(struct super_block *sb,
 static int sanity_check_ckpt(struct f2fs_sb_info *sbi)
 {
 	unsigned int total, fsmeta;
+	unsigned int sit_segs, nat_segs;
 	struct f2fs_super_block *raw_super = F2FS_RAW_SUPER(sbi);
 	struct f2fs_checkpoint *ckpt = F2FS_CKPT(sbi);
 	total = le32_to_cpu(raw_super->segment_count);
